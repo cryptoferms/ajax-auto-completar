@@ -304,7 +304,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BotaoBehavior.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="ClientesService.asmx.cs">
       <DependentUpon>ClientesService.asmx</DependentUpon>
