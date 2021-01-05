@@ -18,7 +18,7 @@ namespace ajax_autocomplete
             {
                 using (SqlConnection con = new SqlConnection(conexao))
                 {
-                    SqlCommand cmd = new SqlCommand("Select Id,Nome from TbClientes", con);
+                    SqlCommand cmd = new SqlCommand("Select Nome from TbLoja", con);
                     con.Open();
                     DDLNome.DataSource = cmd.ExecuteReader();
                     DDLNome.DataBind();

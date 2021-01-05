@@ -15,13 +15,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
     <script type="text/javascript">
+        //Método antigo usando autocomplete
         $(document).ready(function () {
             $('#txtNome').autocomplete({
-                source: 'NomeHandler.ashx',
+                source:'NomeHandler.ashx',
             });
         });
+        //chamada da função na dropdown list SELECT 2
         $(document).ready(function () {
             $(".ddl").select2({
+            /*Caso precise esconder a barra de pesquisa use o código abaixo, propriedade para esconder a barra de busca da dropdownlist
+                minimumResultsForSearch: -1
+            */
             });
         });
     </script>
@@ -32,22 +37,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <%--<div>
             <h1>Auto completar usando ajax jquery</h1>
             <hr />
             Nome das Lojas : 
-            <asp:TextBox ID="txtNome" runat="server" Width="155px" AutoCompleteType="FirstName" ></asp:TextBox>
+            <asp:TextBox ID="txtNome" runat="server" Width="155px"  ></asp:TextBox>
             <hr />
-        </div>
+        </div>--%>
         <div>
             <h2>Select2 usando Select2 para busca e dropdownlist</h2>
             <hr />
             Nome clientes:
             <asp:DropDownList OnLoad="Page_Load" ID="DDLNome" runat="server" CssClass="ddl" AutoPostBack="true" OnSelectedIndexChanged="DDLNome_SelectedIndexChanged" DataTextField="Nome" Height="21px" Width="325px" DataValueField="Id"></asp:DropDownList>
         </div>
-        <p>
+      <%--  <p>
             <asp:Button ID="Button1" runat="server" Text="Button" />
-        </p>
+        </p>--%>
     </form>
 </body>
 </html>

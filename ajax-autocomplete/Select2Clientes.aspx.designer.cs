@@ -11,7 +11,7 @@ namespace ajax_autocomplete
 {
 
 
-    public partial class Exibir
+    public partial class Select2Clientes
     {
 
         /// <summary>
@@ -24,12 +24,12 @@ namespace ajax_autocomplete
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// DDLNome control.
+        /// DDLCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLNome;
+        protected global::System.Web.UI.WebControls.DropDownList DDLCliente;
     }
 }
